@@ -30,3 +30,13 @@
 .padding {
   padding-top: 2rem;
 }
+
+.form-control {
+  width: 40%;
+  margin: auto;
+}
+
+.card{
+  width: 80%;
+  margin: auto;
+}

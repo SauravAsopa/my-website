@@ -1,3 +1,4 @@
+import { BackendService } from './../../services/backend.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -7,13 +8,19 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./blogs.component.css']
 })
 export class BlogsComponent implements OnInit {
-
-  constructor(private router: Router, private route: ActivatedRoute) { }
+blogDetails: any = [];
+  constructor(private router: Router, private backendService: BackendService) { }
 
   ngOnInit() {
+    this.backendService.getBlogDetails().subscribe(
+      res => {
+        this.blogDetails = res;
+        console.log(this.blogDetails);
+      }
+    )
   }
 
-  onReadMore() {
+  onReadMore(id: string) {
     this.router.navigate(['/blog']);
   }
 

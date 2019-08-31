@@ -52,19 +52,47 @@
 </div>
 
 <div class="container-fluid padding">
-  <div class="row padding">
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-header">
-          Category: EDUCATION
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <form action="/action_page.php">
+        <div class="form-group">
+          <label for="sel1"><b>Select list (select one):</b></label>
+          <select class="form-control" id="sel1" name="sellist1">
+            <option>Education</option>
+            <option>Business & Development</option>
+            <option>Sports</option>
+            <option>Entertainment</option>
+          </select>
         </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="container-fluid padding">
+  <div class="row welcome text-center">
+    <div class="col-12">
+      <h1 class="display-4">Recent Blogs</h1>
+    </div>
+    <hr />
+  </div>
+</div>
+<div class="container-fluid padding">
+  <div class="row padding">
+    <div class="col-md-4" *ngFor="let details of blogDetails">
+      <div class="card text-center">
+        <div class="card-header">
+            <b>Category: </b>{{details.category}}
+        </div>
+        <img class="card-img-top" src= {{details.img_path}} alt="Card image cap" />
         <div class="card-body">
-          <h5 class="card-title">Genius children need platform</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <button class="btn btn-outline-secondary" (click) = "onReadMore()">Read More</button>
+          <h5 class="card-title">{{details.title}}</h5>
+          <p class="card-text">
+           {{details.caption}}
+          </p>
+          <a href="#" class="btn btn-primary" (click)="onReadMore(details._id)">Read More</a>
         </div>
         <div class="card-footer text-muted">
-          2 days ago
+          {{details.author}}
         </div>
       </div>
     </div>

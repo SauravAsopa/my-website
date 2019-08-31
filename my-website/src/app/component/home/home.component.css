@@ -1,64 +1,62 @@
-.carousel-inner img {
-  height: 400px;
-  width: 100%;
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  min-height: 300px;
+.site-content {
+  background-image: url('../../../assets//cabinet-clothes-clothes-hanger-996329.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0.7;
 }
 
-
-.carousel-caption {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.site-title, .site-desc {
+  color:white;
 }
 
-.carousel-caption h1 {
-  font-size: 500%;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 15px #000;
+.site-title {
+  margin-top: 20%;
+  margin-bottom: 6%;
+  font-size: 70px;
 }
 
-.carousel-caption h3 {
-  font-size: 200%;
-  font-weight: 500;
-  text-shadow: 1px 1px 10px #000;
-  padding-bottom: 1rem;
+.site-desc {
+  font-size: 30px;
+  padding-left: 20%;
 }
 
-.btn-primary {
-  background-color: #6648b1;
-  border: 1px solid #6648b1;
+.site-btn1 {
+  margin-left: 30%;
+  background-color: maroon;
+  color: white;
+}
+.site-btn2 {
+  background-color: maroon;
+  color: white;
 }
 
-.btn-primary:hover {
-  background-color: #563d7c;
-  border: 1px solid #563d7c;
+.site-btn1:hover {
+  background-color: black;
+  color: wheat;
 }
-
-.jumbotron {
-  padding: 0 px !important;
-  border-radius: 0;
+.site-btn2:hover {
+  background-color: black;
+  color: wheat;
+}
+.site-btn1 , .site-btn2 {
+   margin-top: 5%;
+   margin-bottom: 15%;
 }
 
 .padding {
   padding-bottom: 2rem;
 }
 
-.welcome {
-  width: 75%;
-  margin: 0 auto;
-  padding-top: 2rem;
+a.custom-card,
+a.custom-card:hover {
+  color: inherit;
+  text-decoration: none;
 }
 
-.welcome hr {
-  border-top: 2px solid #b4b4b4;
-  width: 95%;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+.card {
+  width: 80%;
+  margin: auto;
 }
-
 .social a{
   font-size: 4.5em;
   padding: 3rem;
@@ -105,4 +103,92 @@ hr.light-100 {
   width: 100%;
   margin-top: .8rem;
   margin-bottom: 1rem;
+}
+
+/* section-1 */
+
+.section-1 .heading-1{
+  margin-top: 8%;
+  margin-bottom: 5%;
+}
+
+.section-1 .card-text {
+  color: rgba(0, 0, 0, 0.59);
+}
+
+.section-1 {
+  margin-bottom: 8%;
+}
+
+.section-1 .card {
+  border: none;
+}
+
+/* section2 */
+.section-2 .container-fluid {
+  background-image: url('../../../assets/tshirt_background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.9
+}
+
+.section-2 .heading-1 {
+  margin-top: 20%;
+  margin-bottom: 4%;
+  width: 80%;
+  color: white;
+}
+
+.section-2 .para{
+  width: 80%;
+  color: white;
+  margin-bottom: 7%;
+  font-size: 20px;
+}
+
+.section-2 .btn {
+  margin-bottom: 15%;
+  width: 30%;
+  padding: 2%, 5%;
+}
+
+/* section-3 */
+.section-3{
+  margin-top: 6%;
+  margin-bottom: 8%;
+}
+
+.section-3 i {
+  color:#00e8e8;
+}
+
+.section-3 p {
+  color: rgba(0, 0, 0, 0.59)
+}
+
+.section-4 .row .col-md-7, .col-md-5 {
+margin-top: 10%;
+margin-bottom: 10%;
+}
+
+.section-4 a {
+  color: lightblue;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.section-4 .para-1 {
+  color: white;
+  margin-top: 7%;
+  font-size: 23px;
+}
+
+@media screen and (max-width: 768px) {
+  .section-1 .col-md-4 .card {
+    width: 14rem;
+  }
+
+  .section-4 .col-md-7 img {
+    width: 350px;
+  }
 }
