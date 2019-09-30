@@ -1,0 +1,82 @@
+<div class="container-fluid cart">
+  <div class="row">
+    <div class="col-xs-12 col-md-7 cardDescription">
+      <div class="cartSection">
+        <span class="pull-left"
+          >My Items
+          <span class="quantityCount"
+            ><br />
+            2 Items
+          </span>
+        </span>
+        <div class="border mt-4" *ngFor="let list of cartList">
+          <div class="cartProduct">
+            <div class="row">
+              <div class="col-md-3">
+                <img src= {{list.img_path}} />
+              </div>
+              <div class="col-md-9 pt-4">
+                <span>{{list.tshirt_name}}</span>
+                <div class="orginalPrice pt-2">
+                  <span>
+                    <i class="fa fa-inr">{{list.price}}</i>
+                  </span>
+                  <span class="originalMrp">
+                    <i class="fa fa-inr"><s>{{list.actual_price}}</s></i>
+                  </span>
+                </div>
+                <div class="col-xs-12">
+                  <span style="font-size: 12px;">Size</span>&nbsp;
+                  <select class="custom-select custom-select-sm">
+                    <option selected value="1">S</option>
+                    <option value="2">M</option>
+                    <option value="3">L</option> </select
+                  >&nbsp; <span style="font-size: 12px;">Quantity</span>&nbsp;
+                  <select class="custom-select custom-select-sm">
+                    <option selected value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-9 pull-left">
+                <div class="cartRemove">
+                  <a (click)="onRemoveClick()">Remove</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-5">
+      <div class="invoiceInfo">
+        <div>
+          <a>Have a Gift/Promo Code</a>
+        </div>
+        <div class="billingHistory pt-4">
+          Order Summary
+        </div>
+        <div class="amount pt-4 pb-4">
+          <div class="pull-left">Total MRP (Inclusive of all taxes)</div>
+          <div class="pull-right">499</div>
+        </div>
+        <div class="amount pt-4 pb-4">
+          <div class="pull-left">Shipping</div>
+          <div class="pull-right" style="color: green;">FREE</div>
+        </div>
+        <div class="amount pt-4 pb-4">
+          <div class="pull-left">Discount</div>
+          <div class="pull-right">200</div>
+        </div>
+        <div class="amount pt-4 pb-4">
+          <div class="pull-left">Amount to be paid</div>
+          <div class="pull-right">299</div>
+        </div>
+        <div class="text-center pt-4 pb-4">
+          <button class="btn btn-primary btn-lg mt-4" (click)="onSelectDeliveryAddress()">Select Delivery Address</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

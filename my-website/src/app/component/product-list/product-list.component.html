@@ -1,0 +1,27 @@
+<div class="section-1 mt-4">
+  <div class="container text-center">
+    <h1 class="heading-1">
+      {{category}}
+    </h1>
+    <p class=" mt-4 para-1">
+      Browse our catalog of hundreds of product style and color combinations to
+      find the perfect shirt to customize. We think you'll be amazed at the
+      quality of our t-shirts, tank tops, hoodies, hats, and lots more.
+    </p>
+  </div>
+</div>
+<div class="container-fluid pt-4 section-2">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let product of productList">
+        <a [routerLink]="['/productdesciption', product.product_code ]" style="cursor: pointer">
+          <!-- [routerLink]="['/products', category.category_name]" -->
+          <div class="card">
+            <img src="{{ product.img_path }}" alt="productimage" class="card-img-top" />
+            <!-- <div class="card-body"> -->
+              <h4 class="card-title">{{ product.tshirt_name }}</h4>
+            <!-- </div> -->
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>

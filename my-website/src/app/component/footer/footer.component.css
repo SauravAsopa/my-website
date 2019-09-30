@@ -1,0 +1,21 @@
+footer {
+  margin-top: 150px;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.49);
+  padding: 1rem;
+}
+
+.footer-section1 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.footer-section1 a {
+  text-decoration: none;
+  color: #666;
+}
+
+.footer-section1 a:hover {
+  color: maroon;
+}

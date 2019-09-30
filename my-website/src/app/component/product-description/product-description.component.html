@@ -1,0 +1,30 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-5">
+      <img
+        class="d-block w-100"
+        src={{img_path}}
+        alt="productimage"
+      />
+    </div>
+    <div class="col-md-7 mt-4">
+      <p class="newarrival text-center">NEW</p>
+      <h2>{{tshirt_name}}</h2>
+      Product Code: <span>{{product_code}}</span>
+      <p class="price">INR {{price}}</p>
+      <p><s>INR {{actual_price}}</s></p>
+      <p>Incl. taxes</p>
+      <p>Select Size</p>
+      <div class="selectsize">
+        <div class="eachsize" *ngFor="let size of sizeVariant">
+          <span>{{ size }}</span>
+        </div>
+      </div>
+      <div class="pt-4" style="float: left; width: 100%;">
+        <label for="">Quantity: </label>&nbsp;
+        <input type="text" value="1" /><br />
+        <button class="btn btn-primary cart btn-lg mt-4" (click) = "onAddToCart()">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,132 @@
+<div class="section-1 mt-4">
+  <div class="container text-center">
+    <div class="border mt-4">
+      <div class="heading1 text-left mt-4 pl-4">
+        User Details
+        <hr />
+      </div>
+      <div>
+        <!-- <form (submit)="onLogin(loginForm)" #loginForm="ngForm"> -->
+        <form (submit)= "onAddressSave(address)" #address="ngForm">
+          <mat-form-field>
+            <input
+              matInput
+              type="text"
+              ngModel
+              name="fullName"
+              placeholder="Full Name"
+              #fullName="ngModel"
+              required
+            />
+            <mat-error *ngIf="fullName.invalid">Please enter Full Name.</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              type="text"
+              matInput
+              name="phone"
+              placeholder="Phone Number"
+              ngModel
+              #phone="ngModel"
+              required
+            />
+            <mat-error *ngIf="phone.invalid"
+              >Please enter Phone Number.</mat-error
+            >
+          </mat-form-field>
+          <div class="heading1 text-left mt-4 pl-4">
+            Address
+            <hr />
+          </div>
+          <mat-form-field>
+            <input
+              matInput
+              type="text"
+              ngModel
+              name="pincode"
+              placeholder="pincode"
+              #pincode="ngModel"
+              required
+            />
+            <mat-error *ngIf="pincode.invalid"
+              >Please enter valid Pincode.</mat-error
+            >
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              type="text"
+              ngModel
+              name="addr"
+              placeholder="pincode"
+              #addr="ngModel"
+              required
+            />
+            <mat-error *ngIf="addr.invalid"
+              >Please enter valid Pincode.</mat-error
+            >
+          </mat-form-field>
+           <mat-form-field>
+            <input
+              matInput
+              type="locality"
+              ngModel
+              name="locality"
+              placeholder="Locality"
+              #locality="ngModel"
+              required
+            />
+            <mat-error *ngIf="locality.invalid"
+              >Please enter Locality.</mat-error
+            >
+          </mat-form-field>
+           <mat-form-field>
+            <input
+              matInput
+              type="city"
+              ngModel
+              name="city"
+              placeholder="City"
+              #city="ngModel"
+              required
+            />
+            <mat-error *ngIf="city.invalid">Please enter City.</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              type="state"
+              ngModel
+              name="state"
+              placeholder="State"
+              #state="ngModel"
+              required
+            />
+            <mat-error *ngIf="state.invalid">Please enter City.</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              type="country"
+              ngModel
+              name="country"
+              placeholder="Country"
+              #country="ngModel"
+              required
+            />
+            <mat-error *ngIf="state.invalid">Please enter Country.</mat-error>
+          </mat-form-field>
+          <br />
+          <div class="text-right mr-4 mb-4">
+            <button class="btn btn-default mt-2">
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary mt-2">
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

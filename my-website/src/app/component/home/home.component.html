@@ -4,7 +4,7 @@
       <div class="d-flex flex-column">
         <h4 class="site-title heading-1">{{ header }}</h4>
         <h5 class="site-desc">{{ title }}</h5>
-        <div class="d-flex flex-row">
+        <!-- <div class="d-flex flex-row">
           <input
             type="button"
             value="Get Quotes"
@@ -12,10 +12,10 @@
           />
           <input
             type="button"
-            value="View Gallary"
+            value="View Gallery"
             class="btn site-btn2 px-4 py-3 mr-4 btn-dark"
           />
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -28,10 +28,10 @@
     <div class="row">
       <div
         class="col-md-3"
-        *ngFor="let category of categoryDetails; let i = index"
-      >
+        *ngFor="let category of categoryDetails; let i = index">
+        <a [routerLink]="['/products', category.category_name]">
         <div class="card" *ngIf="i < 4">
-          <img src="{{ category.img_path }}" alt="" class="card-img-top" />
+          <img src="{{ category.img_path }}" alt="categoryimages" class="card-img-top" />
           <div class="card-body">
             <h4 class="card-title">{{ category.category_name }}</h4>
             <p class="card-text">
@@ -39,6 +39,7 @@
             </p>
           </div>
         </div>
+      </a>
       </div>
     </div>
   </div>
@@ -93,17 +94,17 @@
         <p class="para">
           We would love to hear from you. Please share your feedback to us.
         </p>
-        <input type="button" value="Share" class="btn btn-danger" />
+        <input type="button" value="Share" class="btn btn-danger" (click)="onShareClick()" />
       </div>
     </div>
   </div>
 </div>
 
-<div class="section-4 bg-dark mt-4">
+<!-- <div class="section-4 bg-dark mt-4">
   <div class="container">
     <div class="row">
       <div class="col-md-7">
-        <img src="../../../assets/education_student.jpg" alt="" width="590" />
+        <img src="../../../assets/education_student.jpg" alt="image" width="590" />
       </div>
       <div class="col-md-5">
         <h1 class="text-white">Some text here</h1>
@@ -114,7 +115,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <div class="container-fluid padding mt-4">
   <div class="row welcome text-center">
@@ -129,7 +130,7 @@
   <div class="row padding">
     <div class="col-md-3" *ngFor="let team of teamDetails">
       <div class="card">
-        <img src="{{ team.img_path }}" alt="" class="card-img-top" />
+        <img src="{{ team.img_path }}" alt="teamimages" class="card-img-top" />
         <div class="card-body">
           <h4 class="card-title">{{ team.name }}</h4>
           <p class="card-text">
@@ -149,7 +150,7 @@
       type="text"
       name="email"
       id="email"
-      placeholder="Enter your email"
+      placeholder="Enter your email" [(ngModel)] = "email"
       size="40"
       class="form-control px-4 py-2"
     />
@@ -157,16 +158,17 @@
       type="button"
       value="Contact Us"
       class="btn btn-danger px-4 py-2 ml-2"
+      (click) = "contactUs()"
     />
   </div>
 </div>
 
-<div class="container-fluid padding mt-4">
-  <div class="row text-center padding">
-    <div class="col-12">
+<div class="container-fluid">
+  <div class="row text-center">
+    <div class="col-12 connect">
       <h2>Connect</h2>
     </div>
-    <div class="col-12 social padding">
+    <div class="col-12 social mt-4">
       <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
       <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
       <a href="#"><i class="fa fa-google" aria-hidden="true"></i></a>
@@ -175,38 +177,3 @@
     </div>
   </div>
 </div>
-
-<footer>
-  <div class="container-fluid">
-    <div class="row text-center">
-      <div class="col-md-4">
-        <h2>Logo</h2>
-        <hr class="light" />
-        <p>+91-7209373616</p>
-        <p>igaurav.asopa@gmail.com</p>
-        <p>004, Surya Palace</p>
-        <p>Bengaluru,Karnataka,560076</p>
-      </div>
-      <div class="col-md-4">
-        <hr class="light" />
-        <h2>Our Hours</h2>
-        <hr class="light" />
-        <p>Monday: 9am - 6pm</p>
-        <p>Saturday: 10am - 4pm</p>
-        <p>Sunday: Closed</p>
-      </div>
-      <div class="col-md-4">
-        <hr class="light" />
-        <h2>Useful Links</h2>
-        <hr class="light" />
-        <p>L1</p>
-        <p>L2</p>
-        <p>L3</p>
-      </div>
-      <div class="col-12">
-        <hr class="light-100" />
-        <h5><i class="fa fa-copyright" aria-hidden="true"></i>abc.com</h5>
-      </div>
-    </div>
-  </div>
-</footer>

@@ -1,13 +1,55 @@
-<mat-card>
-  <form (submit) = "onLogin(loginForm)" #loginForm="ngForm">
-    <mat-form-field>
-      <input matInput type="email" name="email" placeholder="Email" ngModel required email #email = "ngModel"/>
-      <mat-error *ngIf="email.invalid">Please enter valid email</mat-error>
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput type="password" name="password" placeholder="Password" ngModel required #password="ngModel" />
-      <mat-error *ngIf="password.invalid">Please enter valid password</mat-error>
-    </mat-form-field>
-    <button mat-raised-button color="primary" type="submit">Login</button>
-  </form>
-</mat-card>
+<div class="section-1 mt-4">
+  <div class="container text-center">
+    <h1 class="heading-1">
+      Log In To Your Account
+    </h1>
+  </div>
+</div>
+<div class="alert alert-info" role="alert" *ngIf="!isAuthenticated">
+  It's look like you don't have account with us!!Please Signup
+</div>
+<div class="container pt-4 section-2">
+  <div>
+    <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+        <mat-form-field>
+            <input
+              matInput
+              type="email"
+              ngModel
+              name="email"
+              placeholder="Email Address"
+              #email="ngModel"
+              required
+              email
+            />
+            <mat-error *ngIf="email.invalid"
+              >Please enter a valid email address.</mat-error
+            >
+          </mat-form-field>
+          <mat-form-field>
+              <input
+                type="password"
+                matInput
+                name="password"
+                placeholder="Password"
+                ngModel
+                #password="ngModel"
+                required
+              />
+              <mat-error *ngIf="password.invalid"
+                >Please enter a valid password.</mat-error
+              >
+            </mat-form-field>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1"
+          >Keep me logged in</label
+        >
+      </div>
+      <button type="submit" class="btn btn-primary mt-2">
+        Login In Account
+      </button>
+      <p class="pt-2">Don't have an account? <span><a routerLink="/signup">Sign Up Here</a></span></p>
+    </form>
+  </div>
+</div>

@@ -1,8 +1,8 @@
 .site-content {
-  background-image: url('../../../assets//cabinet-clothes-clothes-hanger-996329.jpg');
+  background-image: url('../../../assets/apparel-attire-blur-994517.jpg');
   background-attachment: fixed;
   background-size: cover;
-  opacity: 0.7;
+  /* opacity: 0.7; */
 }
 
 .site-title, .site-desc {
@@ -18,16 +18,24 @@
 .site-desc {
   font-size: 30px;
   padding-left: 20%;
+  margin-bottom: 20%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .site-btn1 {
   margin-left: 30%;
-  background-color: maroon;
+  background: transparent;
   color: white;
+  font-weight: bold;
 }
 .site-btn2 {
-  background-color: maroon;
+  background: transparent;
   color: white;
+  font-weight: bold;
 }
 
 .site-btn1:hover {
@@ -83,12 +91,6 @@ a.custom-card:hover {
 .fa-instagram:hover,
 .fa-youtube-play:hover {
   color:#d5d5d5;
-}
-
-footer {
-  background-color: #3f3f3f;
-  color: #d5d5d5;
-  padding: 1rem;
 }
 
 hr.light {
@@ -183,6 +185,10 @@ margin-bottom: 10%;
   font-size: 23px;
 }
 
+.connect {
+  margin-top: 10%;
+}
+
 @media screen and (max-width: 768px) {
   .section-1 .col-md-4 .card {
     width: 14rem;
@@ -190,5 +196,27 @@ margin-bottom: 10%;
 
   .section-4 .col-md-7 img {
     width: 350px;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .site-title {
+    margin-top: 20%;
+    margin-bottom: 6%;
+    font-size: 20px;
+    padding-left: 1.2rem;
+    font-weight: bold;
+  }
+
+  .site-desc {
+    font-size: 15px;
+    /* width: 80%; */
+    /* margin: auto; */
+   padding-left: 15px;
+   padding-right: 15px;
+  }
+
+  .section-1 .heading-1 {
+    font-size: 40px;
   }
 }

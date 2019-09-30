@@ -1,0 +1,48 @@
+.newarrival {
+  background: green;
+  width: 50px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold
+}
+.col-md-7 h2 {
+  color: #555;
+}
+
+.price {
+  color: #FE980F;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+input {
+  border: 1px solid #ccc;
+  font-weight: bold;
+  height: 33px;
+  text-align: center;
+  width: 30px;
+}
+
+/* .cart {
+  background: #FE980F;
+  color: #FFFFFF;
+  font-size: 15px;
+  margin-top: 10px;
+} */
+
+.selectsize {
+ float: left;
+}
+
+.eachsize {
+  border: 1px solid #e6e6e6;
+  color: #000;
+  cursor: pointer;
+  float: left;
+  font-size: 14px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 4px 5px 0;
+  text-align: center;
+  width: 60px;
+}

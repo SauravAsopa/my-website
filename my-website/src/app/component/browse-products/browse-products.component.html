@@ -13,9 +13,9 @@
 <div class="container-fluid pt-4 section-2">
   <div class="row">
     <div class="col-md-3" *ngFor="let category of categoryDetails">
-      <a href="" style="cursor: pointer">
+      <a [routerLink]="['/products', category.category_name]" style="cursor: pointer">
         <div class="card">
-          <img src="{{ category.img_path }}" alt="" class="card-img-top" />
+          <img src="{{ category.img_path }}" alt="categoryimages" class="card-img-top" />
           <div class="card-body">
             <h4 class="card-title">{{ category.category_name }}</h4>
           </div>
